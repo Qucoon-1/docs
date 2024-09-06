@@ -33,7 +33,7 @@
     {
       "name": "new reference",
       "url": "new-reference",
-      "openapi": "https://petstore3.swagger.io/api/v3/openapi.json"
+      "openapi": "https://billspaymentlogo.s3.amazonaws.com/Encryption.openapi.json"
     }
   ],
   "anchors": [
