@@ -33,7 +33,7 @@
     {
       "name": "new reference",
       "url": "new-reference",
-      "openapi": "/Encryption.json"
+      "openapi": "Encryption.json"
     }
   ],
   "anchors": [
