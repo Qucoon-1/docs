@@ -6,10 +6,27 @@ servers:
   - url: https://o2x4s7fcyl.execute-api.us-east-1.amazonaws.com
 paths:
   /dev/encrypt:
-    get:
+    post:
       tags:
         - default
       summary: Encrypt
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                body:
+                  identificationUserId: 156
+                  identificationType: ID_CARD
+                  identificationNumber: 7
+                  identificationIssueDate: '2022-06-20'
+                  identificationExpiryDate: '2026-06-20'
+                  identificationLink: >-
+                    https://apvertise-repo.s3.amazonaws.com/NaN1684427046493.png,https://apvertise-repo.s3.amazonaws.com/NaN1678659797527.png
+                  identificationCustomerId: 156
+                  identificationCardNo: null
+                type: CBC-NIBSS-PROD
       responses:
         '200':
           description: OK
@@ -52,10 +69,19 @@ paths:
                 encryptedText: >-
                   DAAAAJLQ7JvgE+6ZSx/x0xAAAAD8Vik1r3DEOmaNCSqs8fn7ntA4KPDQdLcOPkB+VN1ygA==
   /dev/decrypt:
-    get:
+    post:
       tags:
         - default
       summary: Decrypt
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                body: >-
+                  fc9ca59ce09d2a1b18b68d66c9ca8988796dc236ac24bcabd0430e589c5c18a22f162291e1b06807a5f3abb750a879467ac81a83df259864a63ae974232818b1bcb44c327f215cf36c8c4abb6e7866b13670a577af0428534e1304ff904686d62c929bcb0d79aaefdcf1917224021a8d91cc6d25b31d706f8136220256b81661f264ea96ef107d65f2f8d6716b71a4cbcf41195e2d4e50d152afaad8d05d4c2f6818948bed58fb74650d8885b4fdd064a2fbb123fef360f9c18b79cb9c2155ed52c77a54100987df685a4cf22b78a835daf4fe6976769c92664fbe48adc2b10539cd240863ee833475191e6f24ad223e068c34fe2dd421312d0fd60c502fb417356db98a4c12882c7977eebb4dc178909402888ecfc378562834aa7ac13d3935b8c95e2cc9077d798737a9e9e53bc3e2ea88394e5fe231bee268614573eeeb49bd3676f796550bbbcae43505008afd26be67c0655cface419c0f0a0c2532abca
+                type: CBC-NIBSS-PROD
       responses:
         '200':
           description: OK
