@@ -31,11 +31,6 @@
       "url": "api-reference"
     },
     {
-      "name": "ENCRYPTION Reference",
-      "url": "ENCRYPTION-reference",
-      "openapi": "https://billspaymentlogo.s3.amazonaws.com/Encryption.postman_collection.json"
-    },
-    {
       "name": "new reference",
       "url": "new-reference",
       "openapi": "https://petstore3.swagger.io/api/v3/openapi.json"
